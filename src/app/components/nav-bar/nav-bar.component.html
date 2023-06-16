@@ -1,0 +1,40 @@
+<div class="navbar light-shadow" [style.background-color]="palette.mainColor">
+  <a href="#hide" class="hide" id="hide">
+    <svg class="navbar__icon">
+      <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Bar" fill="#ffffff"></use>
+    </svg>
+  </a>
+
+  <a href="#show" class="show" id="show">
+    <svg class="navbar__icon">
+      <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Bar" fill="#ffffff"></use>
+    </svg>
+  </a>
+
+  <div class="l-list">
+    <ul class="unordered">
+      <li class="unordered__list unordered__list--active"><a href="#" class="unordered__title">Link</a></li>
+      <li class="unordered__list"><a href="#" class="unordered__title">Link</a></li>
+
+      <div class="dropdown">
+        <input type="checkbox" id="dropdown" hidden>
+        <label class="dropdown__label" for="dropdown">Dropdown
+          <svg class="dropdown__icon">
+            <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.CaretDown" fill="#ffffff"></use>
+          </svg>
+        </label>
+
+        <ul class="dropdown__content light-shadow">
+          <li class="dropdown__item"
+              [appHoverColor]="palette.mainColor">
+            <a>Action</a>
+          </li>
+          <li class="dropdown__item"
+              [appHoverColor]="palette.mainColor">
+            <a>Another action</a>
+          </li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>

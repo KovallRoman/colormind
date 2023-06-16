@@ -1,0 +1,40 @@
+.input {
+  margin-top: 30px;
+  padding-bottom: 7px;
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin: auto 0;
+  }
+
+  &--success {
+    color: #4caf50;
+  }
+
+  &--error {
+    color: #f44336;
+  }
+
+  &__block {
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  &__control {
+    border: none;
+    outline:none;
+  }
+}
+
+.form-control {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+  margin-bottom: 4px;
+  padding: 7px 0;
+  outline: none;
+  resize: none;
+}

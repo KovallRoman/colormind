@@ -1,0 +1,155 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/box-shadow";
+@import "src/assets/styles/footer-btn";
+
+.container {
+  max-width: 1185px;
+  margin: auto;
+}
+
+.l-colors {
+  background-color: #191919;
+  color: #8e8e8e;
+  min-height: 400px;
+  width: 100%;
+}
+
+.colors {
+  max-width: 750px;
+  padding: 90px 15px 0;
+  margin: auto;
+
+  @include desktop {
+    max-width: 1185px;
+    padding: 90px 20px 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 200ms;
+    margin-bottom: 30px;
+  }
+}
+
+.color-generate {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  &__recommendation {
+    max-height: 15px;
+    max-width: 450px;
+    text-align: left;
+
+    @include tablet {
+      padding: 0 10px 15px;
+      max-width: 300px;
+      margin: 5px auto;
+    }
+    @include desktop {
+      margin: 15px auto;
+      padding: 0 0 15px;
+    }
+  }
+}
+
+.description {
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @include desktop {
+    padding: 0 40px;
+    max-width: 1185px;
+  }
+}
+
+.title-left {
+  font-size: $title-font-size;
+  line-height: 24px;
+  margin: 20px;
+}
+
+.l-post {
+  padding: 25px 15px 0;
+
+  @include tablet {
+    padding: 25px 20px 0;
+  }
+
+  @include desktop {
+    padding: 25px 40px 0;
+  }
+}
+
+.post {
+  @include desktop {
+    display: flex;
+  }
+
+  &--padding-top {
+    padding-top: 70px;
+  }
+
+  &__row {
+    margin: 0 15px;
+
+    @include desktop {
+      width: calc(33.333% - 30px);
+    }
+
+    &--margin-top {
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include desktop {
+    &__margin-top-minus {
+      margin-top: -30px;
+    }
+  }
+
+  &__margin-top-plus {
+    margin-top: 30px;
+  }
+}
+
+.business-cards {
+  padding-bottom: 30px;
+}
+
+.ui-cards {
+  padding: 50px 20px;
+
+  @include desktop {
+    padding: 50px 40px;
+  }
+}
+
+.title {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__secondary {
+    font-size: $little-front-size;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 10px auto;
+  }
+
+  &__main {
+    font-size: $large-font-size;
+    font-weight: 900;
+    margin: 5px auto 70px;
+  }
+}

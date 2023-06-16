@@ -1,0 +1,103 @@
+<div class="l-colors">
+  <div class="colors">
+    <div class="colors__row">
+      <app-color-card [color]="colorResponse.lightShades"></app-color-card>
+
+      <app-color-card [color]="colorResponse.lightAccent"></app-color-card>
+
+      <app-color-card [color]="colorResponse.mainColor"></app-color-card>
+
+      <app-color-card [color]="colorResponse.darkAccent"></app-color-card>
+
+      <app-color-card [color]="colorResponse.darkShades"></app-color-card>
+    </div>
+
+    <div class="color-generate">
+      <button class="color-generate__button footer-btn" (click)="onGenerateClick()">Generate</button>
+
+      <div class="color-generate__recommendation">
+        For best results try selecting the main-middle color and generating the rest of the palette.
+      </div>
+      <div class="color-generate__recommendation">
+        For best results try selecting the main (middle) color and generating the rest of the palette.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="l-description" [style.background-color]="colorResponse.lightShades">
+  <div class="description">
+    <app-description [palette]="colorResponse"></app-description>
+  </div>
+</div>
+
+<app-colors-use [palette]="colorResponse"></app-colors-use>
+
+<div class="l-post" [style.background-color]="colorResponse.darkShades">
+  <div class="post post--padding-top container">
+
+    <div class="post__row">
+      <app-post [post]="postCardOne" [palette]="colorResponse"></app-post>
+      <app-post [post]="postCardTwo" [palette]="colorResponse"></app-post>
+    </div>
+
+    <div class="post__row">
+      <div class="post__margin-top-minus">
+        <app-post [post]="postCardThree" [palette]="colorResponse"></app-post>
+      </div>
+
+      <div class="post__margin-top-plus">
+        <app-post [post]="postCardFour" [palette]="colorResponse"></app-post>
+      </div>
+    </div>
+
+    <div class="post__row post__row--margin-top">
+      <app-post [post]="postCardFive" [palette]="colorResponse"></app-post>
+      <app-post [post]="postCardSik" [palette]="colorResponse" appearance="border"></app-post>
+    </div>
+  </div>
+
+  <div class="business-cards" [style.background]="colorResponse.darkShades">
+    <div class="container">
+      <h3 class="title-left" [style.color]="colorResponse.lightShades">Light on dark</h3>
+    </div>
+    <div class="container">
+      <app-business-card [palette]="colorResponse"></app-business-card>
+    </div>
+  </div>
+</div>
+
+
+<div class="l-post" [style.background-color]="colorResponse.lightShades">
+  <div class="container">
+    <h3 class="title-left" [style.color]="colorResponse.darkShades">Dark on light</h3>
+  </div>
+
+  <div class="post container">
+    <div class="post__row">
+      <app-post [post]="cardOne" [palette]="colorResponse" appearance="transparent"></app-post>
+      <app-post [post]="cardTwo" [palette]="colorResponse"></app-post>
+    </div>
+
+    <div class="post__row">
+      <app-post [post]="cardThree" [palette]="colorResponse" appearance="transparent"></app-post>
+    </div>
+
+    <div class="post__row">
+      <app-post [post]="cardFour" [palette]="colorResponse" appearance="transparent"></app-post>
+      <app-post [post]="cardFive" [palette]="colorResponse"></app-post>
+    </div>
+  </div>
+</div>
+
+<div class="ui-cards" [style.background-color]="colorResponse.darkShades">
+  <div class="title" [style.color]="colorResponse.lightShades">
+    <h2 class="title__main">UI Components</h2>
+    <h3 class="title__secondary">Functional colors</h3>
+  </div>
+
+  <div class="container">
+    <app-ui-components [palette]="colorResponse"></app-ui-components>
+  </div>
+</div>

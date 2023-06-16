@@ -1,0 +1,31 @@
+<div class="inputs">
+  <div class="input input--success">
+    <label class="input__label">Success input</label>
+    <div class="input__block">
+      <input class="input__control"
+             type="text"
+             value="Success"
+             [style.background-color]="palette.lightShades">
+
+      <svg class="input__icon">
+        <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Done" fill="#4caf50"></use>
+      </svg>
+    </div>
+  </div>
+
+  <div class="input input--error">
+    <label class="input__label">Error input</label>
+    <div class="input__block">
+      <input class="input__control"
+             type="email"
+             value="Error Input"
+             [style.background-color]="palette.lightShades">
+
+      <svg class="input__icon">
+        <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Clear" fill="#f44336"></use>
+      </svg>
+    </div>
+  </div>
+
+  <textarea class="form-control" placeholder="Here can be your nice text" rows="5" [style.background-color]="palette.lightShades"></textarea>
+</div>

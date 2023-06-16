@@ -1,0 +1,28 @@
+@import "src/assets/styles/mixins";
+
+:host {
+  flex: 1;
+}
+
+.color {
+  &__background {
+    min-height: 80px;
+
+    @include tablet {
+      min-height: 140px;
+    }
+
+    @include desktop {
+      min-height: 170px;
+    }
+  }
+
+  &__hex {
+    display: none;
+    margin-top: 10px;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}

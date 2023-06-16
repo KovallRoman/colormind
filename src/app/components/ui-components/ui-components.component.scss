@@ -1,0 +1,54 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/box-shadow";
+
+.ui-cards {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 15px 30px;
+
+  @include tablet {
+    flex-wrap: wrap;
+    max-height: 1380px;
+    padding: 0 5px 30px;
+  }
+
+  @include desktop {
+    max-height: 860px;
+  }
+}
+
+.card {
+  padding: 15px;
+  margin: 15px 0;
+
+  @include tablet {
+    width: 46.5%;
+    margin: 15px 10px;
+  }
+
+  @include desktop {
+    width: 31.333%;
+  }
+
+  &__description {
+    text-align: center;
+    margin: 0 auto 10px;
+    font-size: $small-font-size;
+    line-height: 24px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $normal-font-size;
+    margin: 10px auto;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+}

@@ -1,0 +1,33 @@
+@import "src/assets/styles/mixins";
+
+.l-cards {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1185px;
+
+  @include desktop {
+    padding: 0 40px;
+  }
+}
+
+.cards {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: calc(50% - 20px);
+  display: flex;
+  margin: 50px 10px 0;
+
+  @include tablet {
+    width: calc(33.3333% - 40px);
+    margin: 0 20px;
+  }
+
+  @include desktop {
+    width: calc(20% - 20px);
+   margin: 0 10px;
+  }
+}

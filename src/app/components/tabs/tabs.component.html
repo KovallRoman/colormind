@@ -1,0 +1,33 @@
+<div class="l-tabs">
+  <div class="tabs">
+    <div class="tabs__content">
+      <button class="tabs__button"
+              [class.tabs__button--active]="!toggle"
+              [style.background-color]="toggle ? palette.lightShades : palette.mainColor"
+              [style.color]="toggle ? palette.darkShades : palette.lightShades"
+              (click)="enableDisableRule()">
+        <svg class="tabs__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+ IconEnum.Dashboard"
+               [style.fill]="toggle ?palette.darkShades : palette.lightShades">
+          </use>
+        </svg>
+        Dashboard
+      </button>
+    </div>
+
+    <div>
+      <button class="tabs__button tabs__button--active"
+              [class.tabs__button--active]="toggle"
+              [style.background-color]="toggle ? palette.mainColor : palette.lightShades"
+              [style.color]="toggle ? palette.lightShades : palette.darkShades"
+              (click)="enableDisableRule()">
+        <svg class="tabs__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+ IconEnum.WatchLater"
+               [style.fill]="toggle ? palette.lightShades : palette.darkShades">
+          </use>
+        </svg>
+        Schedule
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="l-description">
+  <div *ngFor="let item of description" class="description">
+    <div class="description__icon">
+      <svg class="description__icon-settings">
+        <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+item.icon" [style.fill]="palette.mainColor"></use>
+      </svg>
+    </div>
+
+    <div class="description__info" [style.color]="palette.darkShades">
+      <h4 class="description__title">{{ item.title }}</h4>
+      <p class="description__text">{{ item.text }}</p>
+    </div>
+  </div>
+</div>

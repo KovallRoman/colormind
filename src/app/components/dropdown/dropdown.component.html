@@ -1,0 +1,16 @@
+<div class="l-dropdown">
+  <div class="dropdown">
+    <input type="checkbox" id="drop" hidden (click)="onInputClick()">
+
+    <label class="dropdown__label light-shadow" for="drop">Regular
+      <svg class="dropdown__icon">
+        <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.CaretDown" fill="#ffffff"></use>
+      </svg>
+    </label>
+
+    <div *ngIf="isDropdownActive" class=" dropdown__content light-shadow">
+      <div class="dropdown__item">Action</div>
+      <div class="dropdown__item">Another action</div>
+    </div>
+  </div>
+</div>

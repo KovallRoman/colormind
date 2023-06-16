@@ -1,0 +1,37 @@
+<div class="business-cards">
+  <div class="business-cards__row">
+    <div class="l-content box-shadow">
+      <div class="content">
+        <h6 class="content__category" [style.color]="palette.lightShades">Photography</h6>
+
+        <h3 class="content__title" [style.color]="palette.lightShades">
+          Inject your color scheme into photography
+        </h3>
+        <p class="content__description" [style.color]="palette.lightAccent">
+          Photo manipulations can be a great way to emphasize brand colors.
+        </p>
+
+        <div class="content__icons">
+          <div class="content__icon" [style.color]="palette.lightShades">
+            <svg class="content__icon-settings">
+              <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Subject" [style.fill]="palette.lightShades"></use>
+            </svg>
+            Article link
+          </div>
+
+          <div class="content__icon" [style.color]="palette.lightShades">
+            <svg class="content__icon-settings">
+              <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.WatchLater" [style.fill]="palette.lightShades"></use>
+            </svg>
+            Watch Later
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="image" [style.background-color]="palette.mainColor">
+      <div class="image__fill box-shadow"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/box-shadow";
+
+.btn {
+  border: none;
+  padding: 12px 30px;
+  margin: 10px 3px;
+  font-size: $little-front-size;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #FFFFFF;
+}

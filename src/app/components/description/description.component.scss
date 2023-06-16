@@ -1,0 +1,43 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.l-description {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.description {
+  display: flex;
+  padding: 20px 15px;
+
+  @include tablet {
+    max-width: 450px;
+    min-height: 200px;
+    margin: 0 auto;
+  }
+
+  &__icon {
+    max-width: 50px;
+  }
+
+  &__info {
+    @include tablet {
+      max-width: 400px;
+    }
+  }
+
+  &__title {
+    font-size: $normal-font-size;
+    font-weight: 900;
+    margin: 12px 0 15px;
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+}

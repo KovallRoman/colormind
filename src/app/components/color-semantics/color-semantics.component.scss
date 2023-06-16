@@ -1,0 +1,24 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.table {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+  font-size: $small-font-size;
+  font-weight: 700;
+  padding: 12px 8px;
+}
+
+.text-left {
+  text-align: left;
+  font-size: $small-font-size;
+  padding: 12px 8px;
+}
+
+.color-hex {
+  font-weight: 200;
+  text-transform: lowercase;
+}

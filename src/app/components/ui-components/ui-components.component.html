@@ -1,0 +1,55 @@
+<div class="ui-cards">
+  <div class="card box-shadow" [style.background-color]="palette.lightShades">
+    <h5 class="card__title title" [style.color]="palette.darkShades">Color Semantics</h5>
+
+    <p class="card__description">Bootstrap's UI colors
+      contain semantic information and shouldn't be changed arbitrarily. However we can tweak them to better fit
+      the color palette.</p>
+
+    <app-color-semantics [palette]="palette"></app-color-semantics>
+  </div>
+
+  <div class="card box-shadow" [style.background-color]="palette.lightShades">
+    <h5 class="card__title title" [style.color]="palette.darkShades">Buttons</h5>
+
+    <div class="buttons">
+      <app-ui-btn color="#9e9e9e" text="Default"></app-ui-btn>
+
+      <app-ui-btn [color]="palette.mainColor" text="Primary"></app-ui-btn>
+
+      <app-ui-btn [color]="palette.darkShades" text="Info"></app-ui-btn>
+
+      <app-ui-btn color="#4caf50" text="Success"></app-ui-btn>
+
+      <app-ui-btn color="#ff9800" text="Warning"></app-ui-btn>
+
+      <app-ui-btn color="#f44336" text="Danger"></app-ui-btn>
+    </div>
+  </div>
+
+  <div class="card box-shadow" [style.background-color]="palette.lightShades">
+    <h5 class="card__title title" [style.color]="palette.darkShades">Dropdown menu</h5>
+    <app-dropdown></app-dropdown>
+  </div>
+
+  <div class="card box-shadow" [style.background-color]="palette.lightShades">
+    <h5 class="card__title title" [style.color]="palette.darkShades">Inputs</h5>
+    <app-Inputs [palette]="palette"></app-Inputs>
+  </div>
+
+  <div class="card box-shadow" [style.background-color]="palette.lightShades">
+    <h5 class="card__title title" [style.color]="palette.darkShades">Nav bar</h5>
+    <app-nav-bar [palette]="palette"></app-nav-bar>
+  </div>
+
+  <div class="card box-shadow" [style.background-color]="palette.lightShades">
+    <h5 class="card__title title" [style.color]="palette.darkShades">Tabs</h5>
+    <app-tabs [palette]="palette"></app-tabs>
+  </div>
+
+  <div class="card box-shadow" [style.background-color]="palette.lightShades">
+    <h5 class="card__title title" [style.color]="palette.darkShades">Table</h5>
+    <app-button-table [palette]="palette"></app-button-table>
+  </div>
+</div>
+

@@ -1,0 +1,84 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/box-shadow";
+
+.business-cards {
+  padding: 0 15px;
+
+  &__row {
+    @include desktop {
+      display: flex;
+    }
+  }
+}
+
+.l-content {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  @include desktop {
+    margin-right: 15px;
+    flex: 1;
+  }
+}
+
+.content {
+  margin: auto;
+  text-align: center;
+  padding: 40px 30px;
+  max-width: 400px;
+
+  &__title {
+    font-size: $title-font-size;
+    line-height: 24px;
+    margin: 20px 0 20px;
+    font-weight: 900;
+  }
+
+  &__category {
+    font-size: $small-font-size;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  &__icons {
+    display: flex;
+    margin: 10px auto;
+    max-width: 230px;
+  }
+
+  &__icon {
+    width: 50%;
+  }
+
+  &__icon-settings {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+.image {
+  margin: 30px 0;
+  border-radius: 3px;
+
+  @include desktop {
+    display: contents;
+  }
+
+  &__fill {
+    background-image: url(/assets/img/png/roses.png);
+    width: auto;
+    min-height: 280px;
+    background-position: center center;
+    background-size: cover;
+
+    @include tablet {
+      min-height: 320px;
+    }
+
+    @include desktop {
+      flex: 1;
+      margin-left: 15px;
+    }
+  }
+}

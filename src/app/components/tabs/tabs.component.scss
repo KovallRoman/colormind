@@ -1,0 +1,41 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/box-shadow";
+
+.l-tabs {
+  max-width: 250px;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+}
+
+.tabs {
+  &__content {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    margin: 20px;
+  }
+
+  &__button {
+    border: none;
+    display: block;
+    padding: 14px 50px;
+    font-size: $little-front-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: (all 0.2s);
+    border-radius: 3px;
+
+    &--active {
+        box-shadow: 0 16px 38px -12px rgb(0 0 0 / 20%),
+                    0 4px 25px 0px rgb(0 0 0 / 6%),
+                    0 8px 10px -5px rgb(0 0 0 / 10%);
+    }
+  }
+}

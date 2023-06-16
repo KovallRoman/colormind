@@ -1,0 +1,25 @@
+<div [style.background-color]="palette.lightShades">
+  <div class="l-cards">
+    <div class="cards">
+      <div class="container">
+        <app-color-description-card [colorsUse]="lightShades" [palette]="palette"></app-color-description-card>
+      </div>
+
+      <div class="container">
+        <app-color-description-card [colorsUse]="lightAccent" [palette]="palette"></app-color-description-card>
+      </div>
+
+      <div class="container">
+        <app-color-description-card [colorsUse]="mainColor" [palette]="palette"></app-color-description-card>
+      </div>
+
+      <div class="container">
+        <app-color-description-card [colorsUse]="darkAccent" [palette]="palette"></app-color-description-card>
+      </div>
+
+      <div class="container">
+        <app-color-description-card [colorsUse]="darkShades" [palette]="palette"></app-color-description-card>
+      </div>
+    </div>
+  </div>
+</div>

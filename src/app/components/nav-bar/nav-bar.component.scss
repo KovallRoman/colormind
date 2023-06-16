@@ -1,0 +1,170 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/box-shadow";
+
+.show {
+  display: none;
+}
+
+.hide:target + .show {
+  display: inline;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.hide:target {
+  display: none;
+}
+
+.hide:target ~ .l-list {
+  display: inline;
+}
+
+.hide:hover .show:hover {
+  opacity: 1;
+  margin-bottom: 25px;
+}
+
+.navbar {
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  border-radius: 3px;
+
+  &__icon {
+    width: 42px;
+    height: 42px;
+    float: right;
+    margin: 10px;
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.l-list {
+  display: none;
+  height: auto;
+  margin: 0;
+
+  @include tablet {
+    padding: 0 20px;
+    display: block;
+  }
+}
+
+.unordered {
+  @include tablet {
+    display: flex;
+    max-height: 70px;
+    line-height: 60px;
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+
+  &__list {
+    @include desktop {
+      margin: 0 10px;
+    }
+    &--active {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 0 10px;
+      border-radius: 4px;
+      padding: 0 15px;
+    }
+  }
+
+  &__list a {
+    min-height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: $little-front-size;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.dropdown {
+  margin: 10px auto;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    margin: auto;
+  }
+
+  &__label {
+    color: white;
+    cursor: pointer;
+    font-size: $little-front-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.04s;
+    margin-left: 25px;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin: -3px 0;
+  }
+
+  &__content {
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.4s;
+    height: 10px;
+
+    @include tablet {
+      top: -15px;
+      left: 15px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 3px;
+    }
+  }
+
+  &__item {
+    padding: 5px 20px;
+    text-align: left;
+    margin: 10px 20px;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+    font-size: $little-front-size;
+    font-weight: 700;
+
+    @include tablet {
+      max-height: 35px;
+      line-height: 15px;
+      color: black;
+      padding: 10px;
+      margin: 0 5px;
+      transition: 0.4s;
+      font-weight: 400;
+      border-radius: 3px;
+    }
+  }
+}
+
+#dropdown:checked ~ .dropdown__content {
+  visibility: visible;
+  opacity: 2;
+  z-index: 10;
+  height: 80px;
+
+  @include tablet {
+    padding: 5px 0;
+  }
+}

@@ -1,0 +1,57 @@
+<table class="table" [style.color]="palette.darkShades">
+  <tr class="table-row table-row--border-bottom">
+    <th class="text--center text">#</th>
+    <th class="text--center text">Name</th>
+    <th class="text--right text">Actions</th>
+  </tr>
+
+  <tr class="table-row table-row--border-bottom">
+    <td class="text--center text">1</td>
+    <td class="text--center text">Andrew Mike</td>
+    <td class="text--right text">
+
+      <button class="table__btn" [style.background-color]="palette.darkShades">
+        <svg class="table__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Person" [style.fill]="palette.lightShades"></use>
+        </svg>
+      </button>
+
+      <button class="table__btn" style="background-color: #7EA54C">
+        <svg class="table__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Clear" [style.fill]="palette.lightShades"></use>
+        </svg>
+      </button>
+
+      <button class="table__btn" style="background-color: #F44336">
+        <svg class="table__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Edit" [style.fill]="palette.lightShades"></use>
+        </svg>
+      </button>
+    </td>
+  </tr>
+
+  <tr class="table-row">
+    <td class="text--center text">2</td>
+    <td class="text--center text">John Doe</td>
+    <td class="text--right text">
+
+      <button class="table__btn table__btn--circle" [style.background-color]="palette.darkShades">
+        <svg class="table__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Person" [style.fill]="palette.lightShades"></use>
+        </svg>
+      </button>
+
+      <button class="table__btn table__btn--circle" style="background-color: #7EA54C">
+        <svg class="table__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Clear" [style.fill]="palette.lightShades"></use>
+        </svg>
+      </button>
+
+      <button class="table__btn table__btn--circle" style="background-color: #F44336">
+        <svg class="table__icon">
+          <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+IconEnum.Edit" [style.fill]="palette.lightShades"></use>
+        </svg>
+      </button>
+    </td>
+  </tr>
+</table>

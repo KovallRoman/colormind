@@ -1,0 +1,39 @@
+<div [class]="'post post--'+ appearance" [style.background-color]="palette[post.backgroundColor]">
+  <div *ngIf="post.headImg && post.imageBackgroundColor"
+       class="post__image"
+       [style.background-color]="palette[post.imageBackgroundColor]">
+
+    <img class="post__head-img" [src]="post.headImg" alt="">
+  </div>
+
+  <div class="post__content">
+    <div class="post__category">
+      <svg *ngIf="post.subtitleIcon && post.iconFill" class="post__icon">
+        <use [attr.href]="'/assets/img/svg/img-sprite.svg#'+post.subtitleIcon"
+             [style.fill]="palette[post.iconFill]">
+        </use>
+      </svg>
+
+      <h6 *ngIf="post.subtitle && post.titleCategoryColor"
+          class="post__category-title"
+          [style.color]="palette[post.titleCategoryColor]">
+        {{ post.subtitle }}
+      </h6>
+    </div>
+
+    <h4 *ngIf="post.title && post.titleColor"
+        class="post__title"
+        [style.color]="palette[post.titleColor]">{{ post.title }}
+    </h4>
+
+    <p *ngIf="post.description && post.descriptionColor"
+       class="post__description"
+       [style.color]="palette[post.descriptionColor]">{{ post.description }}
+    </p>
+
+    <div *ngIf="post.button" class="post__footer">
+      <button href="#" class="post__btn footer-btn box-shadow">Inverted button</button>
+    </div>
+  </div>
+</div>
+

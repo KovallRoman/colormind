@@ -1,0 +1,32 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/box-shadow";
+
+.card {
+  &__background-image {
+    transition: all 200ms;
+  }
+
+  &__fill {
+    width: 100%;
+    padding-top: 50%;
+    opacity: 0.12;
+    background-image: url(/assets/img/svg/tile.svg);
+  }
+}
+
+.card-content {
+  padding: 20px 8px;
+
+  &__title {
+    font-size: $normal-font-size;
+    font-weight: 900;
+    margin: 10px 0;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  &__description {
+    line-height: 24px;
+    font-size: $small-font-size;
+  }
+}
